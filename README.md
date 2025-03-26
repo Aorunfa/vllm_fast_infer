@@ -2,15 +2,13 @@
 使用vllm快速进行transformer模型的推理，快速理解vllm关键技术点，上手模型部署
 
 为什么vllm成为受欢迎推理框架
-- pg attention对内存的有效控制
-- batch推理异步输出，先到先服务，先完成先发送
-
-- transform无缝集成
+- page attention对内存的有效控制
+- iteration层级的调度，实现batch推理异步输出，先到先服务，先完成先发送
+- transformer无缝集成
 - 支持各类量化推理
-- 抢占机制，当gpu资源不够对running的后来任务进行资源抢占（cpu offload）
+- 资源抢占机制，当gpu资源不够对running的后来任务进行资源抢占（cpu offload）
 
-高吞吐量，内存控制，流式响应
-
+高吞吐量，内存控制，流式响应，低延迟
 
 应用场景
 - 本地大批量推理任务，内存控制与分布式多卡推理
