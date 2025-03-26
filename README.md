@@ -50,6 +50,9 @@ swapped对于sequence group长度为1的，直接销毁kv cache，后续进行re
 
 
 # 本地跑批量任务
+本地进行llm或vlm模型的部署，用于大批量跑相关任务，好处在于利用vllm的调度机制实现batch推理的iteration调度，同时，page attendion和cpu offload实现内存的高效利用和管理，整体上实现搞吞吐量和低延迟，有利于节省跑批任务的gpu时
+
+以下一llava和llava-next为例进行部署以及运行时间测试
 
 ## 单卡部署
 
